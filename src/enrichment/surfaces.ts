@@ -35,6 +35,7 @@ export const KNOWN_AI_AGENTS = [
 	"Applebot-Extended",
 	"Bytespider",
 	"CCBot",
+	"MetaAI",
 ];
 
 function mdLink(text: string, href: string): string {
