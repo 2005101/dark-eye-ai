@@ -3,7 +3,7 @@ import { beforeAll, describe, it, expect } from "vitest";
 import { ENRICHED_KEY } from "../src/lib/store";
 import type { Resource } from "../src/lib/types";
 
-const BASE = "https://example.com";
+const BASE = "https://dark-eye-ai.a-beeygutsa.workers.dev";
 
 // Seed the enriched cache so the surfaces serve from KV instead of calling
 // Workers AI on every request. This keeps the suite fast and avoids incurring
@@ -11,7 +11,7 @@ const BASE = "https://example.com";
 const SEEDED: Resource[] = [
 	{
 		slug: "getting-started",
-		url: "https://example.com/docs/getting-started",
+		url: "https://dark-eye-ai.a-beeygutsa.workers.dev/docs/getting-started",
 		title: "Getting Started with Acme",
 		summary: "How to create your first workflow with Acme in five minutes.",
 		keyPoints: ["Install the CLI", "Workflows are YAML"],
@@ -23,7 +23,7 @@ const SEEDED: Resource[] = [
 	},
 	{
 		slug: "pricing",
-		url: "https://example.com/pricing",
+		url: "https://dark-eye-ai.a-beeygutsa.workers.dev/pricing",
 		title: "Pricing",
 		summary: "Acme has Free, Pro, and Enterprise plans.",
 		keyPoints: ["Free $0", "Pro $20/mo"],
@@ -170,7 +170,7 @@ describe("Agent Visibility template", () => {
 			},
 			body: JSON.stringify({
 				slug: "changelog",
-				url: "https://example.com/changelog",
+				url: "https://dark-eye-ai.a-beeygutsa.workers.dev/changelog",
 				title: "Changelog",
 				body: "# Changelog\n\nv2.0 adds workflow templates and a public API.",
 			}),
